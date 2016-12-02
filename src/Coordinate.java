@@ -1,3 +1,8 @@
+/**
+ * 
+ * @author Miles Black (mablack01@aol.com)
+ *
+ */
 
 public class Coordinate {
 	
@@ -6,6 +11,7 @@ public class Coordinate {
 	 */
 	private int x;
 	private int y;
+	private Direction dir;
 	
 	/**
 	 * Default constructor for a (0,0) coordinate.
@@ -42,6 +48,14 @@ public class Coordinate {
 	}
 	
 	/**
+	 * Gets the direction of a coordinate.
+	 * @return The direction.
+	 */
+	public Direction getDirection() {
+		return dir;
+	}
+	
+	/**
 	 * Sets the x value of a coordinate.
 	 * @param amt The new value of x.
 	 */
@@ -55,6 +69,14 @@ public class Coordinate {
 	 */
 	public void setY(int amt) {
 		y = amt;
+	}
+	
+	/**
+	 * Sets the direction of a coordinate.
+	 * @param dir The new direction.
+	 */
+	public void setDirection(Direction dir) {
+		this.dir = dir;
 	}
 
 }
