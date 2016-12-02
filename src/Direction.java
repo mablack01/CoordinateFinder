@@ -20,7 +20,7 @@ public enum Direction {
 	 * @param turn The direction command, either L or R.
 	 * @return The new direction of a coordinate.
 	 */
-	public Direction setNextDirection(Direction origin, char turn) {
+	public static Direction setNextDirection(Direction origin, char turn) {
 		switch(turn) {
 		case 'L':
 			if (origin == NORTH)

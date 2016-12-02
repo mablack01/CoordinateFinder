@@ -14,21 +14,24 @@ public class Coordinate {
 	private Direction dir;
 	
 	/**
-	 * Default constructor for a (0,0) coordinate.
+	 * Default constructor for a (0,0) coordinate facing north.
 	 */
 	public Coordinate() {
 		this.x = 0;
 		this.y = 0;
+		this.dir = Direction.NORTH;
 	}
 	
 	/**
-	 * Constructor for a (x,y) coordinate.
+	 * Constructor for a (x,y) coordinate facing the direction dir.
 	 * @param x Indicated x value.
 	 * @param y Indicated y value.
+	 * @param dir Indicated coordinate direction.
 	 */
-	public Coordinate(int x, int y) {
+	public Coordinate(int x, int y, Direction dir) {
 		this.x = x;
 		this.y = y;
+		this.dir = dir;
 	}
 	
 	/**
@@ -77,6 +80,16 @@ public class Coordinate {
 	 */
 	public void setDirection(Direction dir) {
 		this.dir = dir;
+	}
+	
+	public void move(char turn, int amt) {
+		this.dir = Direction.setNextDirection(dir, turn);
+		switch(dir) {
+		case NORTH:
+		case EAST:
+		case SOUTH:
+		case WEST:
+		}
 	}
 
 }
