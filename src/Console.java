@@ -31,6 +31,7 @@ public class Console {
             System.out.println("Starting coordinate at (0,0)");
             Coordinate coord = processCommand(input);
             System.out.println("The final coordinate is: (" + coord.getX() + "," + coord.getY() + ")");
+            System.out.println("This coordinate is " + (Math.abs(coord.getX()) + Math.abs(coord.getY())) + " blocks away from the original coordinate.");
         } catch(FileNotFoundException ex) {
             System.out.println("Unable to open file '" + file.getName() + "'");
             System.exit(2);
