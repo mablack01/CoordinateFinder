@@ -44,6 +44,11 @@ public class Console {
         }
 	}
 	
+	/**
+	 * Processes the given set of commands.
+	 * @param input The input being read from the text file.
+	 * @return The final coordinate given the inputs.
+	 */
 	public static Coordinate processCommand(String input) {
 		Coordinate coord = new Coordinate();
 		String[] cmd = input.split(", ");
