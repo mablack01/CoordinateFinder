@@ -82,13 +82,26 @@ public class Coordinate {
 		this.dir = dir;
 	}
 	
+	/**
+	 * Moves a coordinate based on the commands given.
+	 * @param turn The direction the coordinate turns to.
+	 * @param amt The amount of spaces the coordinate moves.
+	 */
 	public void move(char turn, int amt) {
 		this.dir = Direction.setNextDirection(dir, turn);
 		switch(dir) {
 		case NORTH:
+			y += amt;
+			break;
 		case EAST:
+			x += amt;
+			break;
 		case SOUTH:
+			y -= amt;
+			break;
 		case WEST:
+			x -= amt;
+			break;
 		}
 	}
 
